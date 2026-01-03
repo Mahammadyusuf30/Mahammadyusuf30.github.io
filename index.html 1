@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahammad Yusuf Shaik | Cybersecurity Portfolio</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #020617;
+      padding: 12px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 12px;
+    }
+
+    nav ul li a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 10%;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    a.btn {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#accomplishments">Accomplishments</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Home -->
+<section id="home">
+  <h2>Mahammad Yusuf Shaik</h2>
+  <p>System Administrator | SOC Analyst | Cybersecurity Professional</p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+    <h3>Programming & Scripting</h3>
+    <ul>
+      <li>Python (Automation, Security Scripts)</li>
+      <li>Bash (Linux & Incident Response)</li>
+      <li>PowerShell (Windows Security)</li>
+      <li>SQL (Database Security & Analysis)</li>
+      <li>JavaScript (Web Security)</li>
+      <li>C / C++ (Low-level & Exploit Analysis)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Security Tools & Platforms</h3>
+    <ul>
+      <li>Firewalls (Palo Alto, FortiGate), VPNs, IDS/IPS</li>
+      <li>SIEM (Splunk, ELK), SOAR, Threat Intelligence</li>
+      <li>Cloud Security (AWS, Azure), IAM, Zero Trust</li>
+      <li>Vulnerability Assessment & Penetration Testing</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>IT Operations</h3>
+    <ul>
+      <li>ITIL, Incident, Change & Problem Management</li>
+      <li>Linux, Windows Server, Active Directory</li>
+      <li>IAM, RBAC, Privileged Access</li>
+      <li>Nagios, Zabbix, CloudWatch</li>
+      <li>ServiceNow, Jira</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <h2>Work Experience</h2>
+
+  <div class="card">
+    <h3>System Administrator – AEON Technologies</h3>
+    <p>Jun 2024 – Present | Remote, India</p>
+    <ul>
+      <li>Conducted IT risk and security assessments across cloud and enterprise environments.</li>
+      <li>Delivered governance-aligned security recommendations.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>SOC Analyst Intern – IT Butler EZ Services</h3>
+    <p>Jan 2025 – Mar 2025 | Dubai, UAE</p>
+    <ul>
+      <li>Monitored SIEM alerts and performed incident triage.</li>
+      <li>Supported data protection and compliance initiatives.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Program Analyst Trainee – Cognizant</h3>
+    <p>Jan 2023 – Aug 2023 | Bengaluru, India</p>
+    <ul>
+      <li>Configured ServiceNow Incident & Change modules.</li>
+      <li>Supported IT governance and audits.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Data Analyst Intern – Technologics</h3>
+    <p>Sept 2021 – Apr 2022</p>
+    <ul>
+      <li>Built Power BI dashboards using DAX and data modeling.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Accomplishments -->
+<section id="accomplishments">
+  <h2>Accomplishments</h2>
+
+  <div class="card">
+    <h3>Junior Cybersecurity Analyst – GISEC 2025</h3>
+    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/EMT%20TEAM%20GISEC.jpg?raw=true">
+    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true">
+  </div>
+
+  <div class="card">
+    <h3>Cybersecurity & Digital Forensics – Dubai Police</h3>
+    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true">
+  </div>
+
+  <div class="card">
+    <h3>Digital Security Forum – Ajman Police</h3>
+    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20Youth%20Interaction.jpeg?raw=true">
+    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20class.jpeg?raw=true">
+    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20certificate.jpeg?raw=true">
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Network Scanner with Nmap (Python)</h3>
+    <p>60% faster network reconnaissance using Python + Nmap.</p>
+    <a class="btn" href="https://github.com/Mahammadyusuf30/Network-scanner-with-NMAP-Integration-with-Python">View Project</a>
+  </div>
+
+  <div class="card">
+    <h3>Simulated Penetration Test & Risk Reporting</h3>
+    <p>Full-cycle pentest with executive-ready risk reports.</p>
+  </div>
+
+  <div class="card">
+    <h3>Football League Data Analysis (Power BI)</h3>
+    <p>Interactive dashboards using DAX and SQL.</p>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Certified System Administrator – ServiceNow</li>
+    <li>Certified Implementation Specialist – ITSM</li>
+    <li>CEH – EC Council</li>
+    <li>Google Cybersecurity – Coursera</li>
+    <li>OPSWAT ICIP</li>
+  </ul>
+</section>
+
+<!-- Resume -->
+<section id="resume">
+  <h2>Resume</h2>
+  <a class="btn" href="Mahammad%20Yusuf%20Shaik%20Resume%20MDX.pdf">Download Resume</a>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:shaikmahammadyusuf65@gmail.com">shaikmahammadyusuf65@gmail.com</a></p>
+  <p>
+    <a href="https://www.linkedin.com/in/mahammadyusuf/">LinkedIn</a> |
+    <a href="https://github.com/Mahammadyusuf30">GitHub</a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Mahammad Yusuf Shaik
+</footer>
+
+</body>
+</html>
