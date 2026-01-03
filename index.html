@@ -7,52 +7,67 @@
 
 <style>
 :root{
-  --primary:#38bdf8;      /* Neon Blue */
-  --secondary:#22d3ee;    /* Cyan */
-  --accent:#a855f7;       /* Purple */
-  --highlight:#facc15;    /* Gold */
-  --dark:#020617;         /* Deep Navy */
-  --card:#020617cc;       /* Glass Card */
-  --text:#e5e7eb;         /* Light text */
+  --primary:#38bdf8;
+  --secondary:#22d3ee;
+  --accent:#a855f7;
+  --highlight:#facc15;
+  --dark:#020617;
+  --text:#e5e7eb;
 }
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family:"Segoe UI", sans-serif;
 }
 
 body{
-  background:radial-gradient(circle at top,#020617,#000000 70%);
+  background:radial-gradient(circle at top,#020617,#000 70%);
   color:var(--text);
   line-height:1.7;
 }
 
-
+/* ================= HEADER ================= */
 header{
-  background:
-    radial-gradient(circle at top,#38bdf8,#020617 70%);
-  color:#fff;
-  padding:110px 20px 90px;
+  background:radial-gradient(circle at top,#38bdf8,#020617 70%);
   text-align:center;
-  position:relative;
-  overflow:hidden;
+  padding:110px 20px 90px;
 }
 
+header h1{font-size:3rem;}
+header p{max-width:900px;margin:15px auto;font-size:1.1rem;}
 
-header h1{
-  font-size:3rem;
+.profile-pic{
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--primary);
+  box-shadow:0 0 0 8px rgba(56,189,248,.15),0 25px 60px rgba(0,0,0,.8);
+  margin-bottom:30px;
+  transition:.4s;
 }
-header p{
-  max-width:900px;
-  margin:15px auto;
-  font-size:1.1rem;
+.profile-pic:hover{
+  transform:scale(1.06);
+  box-shadow:0 0 35px rgba(168,85,247,.7),0 30px 70px rgba(0,0,0,.9);
 }
 
+/* ================= NAV ================= */
 nav{
   background:#020617;
   box-shadow:0 15px 35px rgba(0,0,0,.7);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+nav ul{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  list-style:none;
+  padding:12px;
 }
 
 nav ul li a{
@@ -61,28 +76,25 @@ nav ul li a{
   color:#fff;
   border-radius:999px;
   font-weight:600;
+  text-decoration:none;
   background:linear-gradient(135deg,var(--primary),var(--accent));
   box-shadow:0 10px 25px rgba(0,0,0,.5);
-  transition:.3s ease;
+  transition:.3s;
 }
-
 nav ul li a:hover{
   transform:translateY(-4px);
   background:linear-gradient(135deg,var(--accent),var(--secondary));
 }
 
-section{
-  padding:70px 8%;
-}
+/* ================= SECTIONS ================= */
+section{padding:70px 8%;}
 
 section h2{
   text-align:center;
   font-size:2.7rem;
   color:var(--primary);
   margin-bottom:60px;
-  position:relative;
 }
-
 section h2::after{
   content:"";
   width:90px;
@@ -93,8 +105,7 @@ section h2::after{
   border-radius:20px;
 }
 
-
-/* Cards */
+/* ================= CARDS ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -102,83 +113,43 @@ section h2::after{
 }
 
 .card{
-  background:linear-gradient(
-    180deg,
-    rgba(255,255,255,.05),
-    rgba(255,255,255,.02)
-  );
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
   backdrop-filter:blur(14px);
   border-radius:22px;
   padding:30px;
   border:1px solid rgba(255,255,255,.1);
   box-shadow:0 20px 45px rgba(0,0,0,.6);
-  transition:.4s ease;
+  transition:.4s;
 }
-
 .card:hover{
   transform:translateY(-12px);
-  box-shadow:
-    0 0 30px rgba(56,189,248,.25),
-    0 35px 70px rgba(0,0,0,.8);
-}
-/* Skills */
-.skill-list li{
-  margin-bottom:8px;
+  box-shadow:0 0 30px rgba(56,189,248,.25),0 35px 70px rgba(0,0,0,.8);
 }
 
-/* Images grid */
+.skill-list li{margin-bottom:8px;}
+
+/* ================= IMAGES ================= */
 .image-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
+  gap:18px;
+  margin-top:15px;
 }
 
 .image-grid img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 8px 18px rgba(0,0,0,.15);
-}
-
-.profile-pic{
-  width:210px;
-  height:210px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid var(--primary);
-  box-shadow:
-    0 0 0 8px rgba(56,189,248,.15),
-    0 25px 60px rgba(0,0,0,.8);
-  margin-bottom:30px;
-  transition:.4s ease;
-}
-
-.profile-pic:hover{
-  transform:scale(1.06);
-  box-shadow:
-    0 0 35px rgba(168,85,247,.7),
-    0 30px 70px rgba(0,0,0,.9);
-}
-/*Accomplishments */
-  .image-grid img{
   width:100%;
   height:230px;
   object-fit:cover;
   border-radius:18px;
   box-shadow:0 20px 40px rgba(0,0,0,.8);
-  transition:.35s ease;
+  transition:.35s;
 }
-
 .image-grid img:hover{
   transform:scale(1.07);
-  box-shadow:
-    0 0 30px rgba(56,189,248,.6),
-    0 25px 55px rgba(0,0,0,.9);
+  box-shadow:0 0 30px rgba(56,189,248,.6),0 25px 55px rgba(0,0,0,.9);
 }
 
-
-/* Buttons */
+/* ================= BUTTON ================= */
 .btn{
   display:inline-block;
   padding:14px 30px;
@@ -187,54 +158,45 @@ section h2::after{
   color:#020617;
   font-weight:800;
   text-decoration:none;
-  letter-spacing:.5px;
   box-shadow:0 15px 35px rgba(0,0,0,.6);
-  transition:.3s ease;
+  transition:.3s;
 }
-
 .btn:hover{
   transform:translateY(-5px);
   background:linear-gradient(135deg,var(--accent),var(--primary));
   color:#fff;
 }
 
-
-/* Footer */
+/* ================= FOOTER ================= */
 footer{
   background:#020617;
   color:#94a3b8;
   padding:35px;
   text-align:center;
 }
-
 footer a{
-  color:#38bdf8;
+  color:var(--primary);
+  font-weight:600;
   text-decoration:none;
 }
-
+footer a:hover{
+  color:var(--accent);
+  text-decoration:underline;
+}
 </style>
 </head>
 
 <body>
 
 <header id="home">
-
-  <!-- Profile Image -->
-  <img 
-    src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Yusuf%20Proffesional%20Picture.jpeg?raw=true" 
-    alt="Mahammad Yusuf Shaik"
-    class="profile-pic"
-  >
-
+  <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Yusuf%20Proffesional%20Picture.jpeg?raw=true" class="profile-pic">
   <h1>Mahammad Yusuf Shaik</h1>
   <p>Cybersecurity Professional | SOC Analyst | System Administrator<br>
-  Specializing in Cloud Security, IAM, SIEM, VAPT & Digital Forensics</p>
-
+  Cloud Security • IAM • SIEM • VAPT • Digital Forensics</p>
 </header>
 
 <nav>
 <ul>
-<li><a href="#home">Home</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
@@ -249,77 +211,10 @@ footer a{
 <section id="experience">
 <h2>Work Experience</h2>
 <div class="grid">
-
-<div class="card">
-<h3>System Administrator – AEON Technologies</h3>
-<p><b>Jun 2024 – Present | Remote</b></p>
-<ul>
-<li>Conduct IT risk & security assessments across cloud and enterprise environments</li>
-<li>Delivered governance-aligned, data-driven security recommendations</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>SOC Analyst Intern – IT Butler EZ Services</h3>
-<p><b>Jan 2025 – Mar 2025 | Dubai</b></p>
-<ul>
-<li>Monitored SIEM alerts & performed incident triage</li>
-<li>Supported data protection, log governance & IR workflows</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Program Analyst Trainee – Cognizant</h3>
-<p><b>Jan 2023 – Aug 2023 | Bengaluru</b></p>
-<ul>
-<li>Configured ServiceNow Incident & Change Management</li>
-<li>Supported ITSM audits & governance processes</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Data Analyst Intern – Technologics</h3>
-<p><b>Sept 2021 – Apr 2022 | Remote</b></p>
-<ul>
-<li>Developed Power BI dashboards using DAX & data modeling</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-<h2>Skills</h2>
-<div class="grid">
-
-<div class="card">
-<h3>Programming & Scripting</h3>
-<ul class="skill-list">
-<li>Python, Bash, PowerShell</li>
-<li>SQL, JavaScript</li>
-<li>C / C++</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Security Tools & Platforms</h3>
-<ul class="skill-list">
-<li>SIEM (Splunk, ELK), SOAR</li>
-<li>Firewalls, IDS/IPS, VPNs</li>
-<li>Cloud Security (AWS, Azure), IAM, Zero Trust</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>IT Operations</h3>
-<ul class="skill-list">
-<li>Linux, Windows Server, Active Directory</li>
-<li>ServiceNow, Jira</li>
-<li>Monitoring, Backup & Patch Management</li>
-</ul>
-</div>
-
+<div class="card"><h3>System Administrator – AEON Technologies</h3><p>Jun 2024 – Present | Remote</p></div>
+<div class="card"><h3>SOC Analyst Intern – IT Butler EZ Services</h3><p>Jan 2025 – Mar 2025 | Dubai</p></div>
+<div class="card"><h3>Program Analyst Trainee – Cognizant</h3><p>Jan 2023 – Aug 2023 | Bengaluru</p></div>
+<div class="card"><h3>Data Analyst Intern – Technologics</h3><p>Sept 2021 – Apr 2022 | Remote</p></div>
 </div>
 </section>
 
@@ -327,23 +222,13 @@ footer a{
 <section id="projects">
 <h2>Projects</h2>
 <div class="grid">
-
 <div class="card">
 <h3>Network Scanner with Nmap (Python)</h3>
-<p>Achieved 60% faster network reconnaissance using Python + Nmap.</p>
+<p>60% faster reconnaissance using Python + Nmap.</p>
 <a class="btn" href="https://github.com/Mahammadyusuf30/Network-scanner-with-NMAP-Integration-with-Python">View Project</a>
 </div>
-
-<div class="card">
-<h3>Simulated Full-Cycle Penetration Testing</h3>
-<p>Conducted vulnerability discovery, risk analysis & executive reporting.</p>
-</div>
-
-<div class="card">
-<h3>Football League Data Analysis (Power BI)</h3>
-<p>Built interactive dashboards using DAX, SQL & advanced KPIs.</p>
-</div>
-
+<div class="card"><h3>Full-Cycle Penetration Testing</h3><p>Vulnerability discovery & executive risk reporting.</p></div>
+<div class="card"><h3>Football League Analysis (Power BI)</h3><p>Advanced dashboards using DAX & KPIs.</p></div>
 </div>
 </section>
 
@@ -351,57 +236,36 @@ footer a{
 <section id="accomplishments">
 <h2>Accomplishments</h2>
 
-<h3>GISEC 2025 – EMT Distribution</h3>
+<p><b>GISEC 2025 – EMT Distribution:</b> Cybersecurity awareness & OWASP Top 10</p>
 <div class="image-grid">
-  <li>Supported cybersecurity awareness initiatives covering phishing threats, OWASP Top 10 risks, and ethical technology use, while engaging diverse stakeholders to strengthen communication and policy awareness.</li>
+<li>Supported cybersecurity awareness initiatives covering phishing threats, OWASP Top 10 risks, and ethical technology use, while engaging diverse stakeholders to strengthen communication and policy awareness.</li>
 <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/EMT%20TEAM%20GISEC.jpg?raw=true">
 <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true">
 </div>
 
-<h3 style="margin-top:30px;">Dubai Police – Cybersecurity & Digital Forensics</h3>
+<p style="margin-top:30px;"><b>Dubai Police – Digital Forensics Workshop</b></p>
 <div class="image-grid">
-  <li>Participated in a Cybersecurity & Digital Forensics Workshop conducted by Dubai Police, gaining exposure to cybercrime investigation, digital evidence handling, and forensic best practices.</li>
+<li>Participated in a Cybersecurity & Digital Forensics Workshop conducted by Dubai Police, gaining exposure to cybercrime investigation, digital evidence handling, and forensic best practices.</li>
 <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Dubai%20Police%20Middlesx%20university%20event.jpeg?raw=true">
 <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/MDX%20Team%20at%20dubai%20police%20.jpeg?raw=true">
 </div>
+</section>
 
-<h3 style="margin-top:30px;">Digital Security Forum – Ajman Police</h3>
+<p style="margin-top:30px;"><b>Digital Security Forum – Ajman Youth COuncil - Ajman Police Club</b></p>
 <div class="image-grid">
-  <li>Engaged in expert-led discussions at the Digital Safety Forum, emphasizing collaborative approaches to cybersecurity awareness and responsible digital behaviour.</li>
-<img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20Youth%20Interaction.jpeg?raw=true">
+<li>Supported cybersecurity awareness initiatives covering phishing threats, OWASP Top 10 risks, and ethical technology use, while engaging diverse stakeholders to strengthen communication and policy awareness.</li>
+<img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20Youth%20Interaction.jpeg?raw=true ">
 <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20class.jpeg?raw=true">
-<img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20certificate.jpeg?raw=true">
+<img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20certificate.jpeg?raw=true ">
 </div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-<h2>Certifications</h2>
-<ul style="max-width:800px;margin:auto;font-size:1.1rem;">
-<li>Certified System Administrator – ServiceNow</li>
-<li>Certified Implementation Specialist – ITSM – ServiceNow</li>
-<li>Certified Ethical Hacker (CEH) – EC Council</li>
-<li>Google Cybersecurity – Coursera</li>
-<li>OPSWAT ICIP</li>
-</ul>
-</section>
-
-<!-- RESUME -->
-<section id="resume">
-<h2>Resume</h2>
-<p style="text-align:center;">
-<a class="btn" href="Mahammad%20Yusuf%20Shaik%20Resume%20MDX.pdf">Download Resume</a>
-</p>
-</section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<p style="text-align:center;font-size:1.1rem;">
-📧 <b>Email:</b> shaikmahammadyusuf65@gmail.com<br>
-🔗 <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/mahammadyusuf/">mahammadyusuf</a><br>
-💻 <b>GitHub:</b> <a href="https://Mahammadyusuf30.github.io">Mahammadyusuf30.github.io</a>
+<p style="text-align:center;">
+📧 shaikmahammadyusuf65@gmail.com<br>
+🔗 <a href="https://www.linkedin.com/in/mahammadyusuf/">LinkedIn</a> |
+💻 <a href="https://Mahammadyusuf30.github.io">GitHub</a>
 </p>
 </section>
 
