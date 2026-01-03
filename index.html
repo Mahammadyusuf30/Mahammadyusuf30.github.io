@@ -1,384 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahammad Yusuf Shaik | Cybersecurity Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg-main: #0f172a;
-  --bg-card: #020617;
-  --accent: #38bdf8;
-  --text-main: #e5e7eb;
-  --border-soft: #1e293b;
+  --primary: #0f62fe;
+  --secondary: #00c9a7;
+  --dark: #0a0f1c;
+  --light: #f4f6fb;
+  --accent: #ffb703;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #ffffff;
-  color: #111827;
+  background: var(--dark);
+  color: white;
   line-height: 1.6;
 }
 
-
-/* ---------------- NAVBAR ---------------- */
+/* NAVBAR */
 nav {
-  background: #0f172a;
-  padding: 12px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  background: rgba(10,15,28,0.9);
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
   z-index: 1000;
 }
 
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 12px;
-  margin: 0;
-}
-
-nav ul li {
-  margin: 6px 14px;
-}
-
-nav ul li a {
-  color: var(--accent);
+nav a {
+  color: white;
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: var(--secondary);
 }
 
-/* ---------------- SECTIONS ---------------- */
-section {
-  padding: 50px 10%;
-  border-bottom: 1px solid #e5e7eb;
-  background: #ffffff;
-}
-
-/* ---------------- HOME ---------------- */
-#home {
-  text-align: center;
-  padding-top: 80px;
-}
-
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--accent);
-  margin-bottom: 20px;
-  box-shadow: 0 0 25px rgba(56,189,248,0.3);
-}
-
-#home h2 {
-  font-size: 2.2rem;
-  margin-bottom: 8px;
-}
-
-#home p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-/* ===== HERO SECTION (PROFILE IMAGE) ===== */
+/* HERO */
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f62fe, #00c9a7);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+  padding: 120px 20px;
 }
 
-
-/* Large Profile Picture */
-.profile-pic-large {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+.hero img {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  border: 4px solid #0f172a;
-  box-shadow: 0 0 35px rgba(56, 189, 248, 0.35);
+  border: 6px solid white;
+  object-fit: cover;
   margin-bottom: 25px;
 }
 
-/* Hero Text */
 .hero h1 {
-  font-size: 2.4rem;
-  margin: 10px 0;
-  color: #e5e7eb;
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  color: #94a3b8;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .profile-pic-large {
-    width: 220px;
-    height: 220px;
-  }
-
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-}
-
-/* ---------------- CARDS ---------------- */
-.card {
-  background: #f9fafb;
-  padding: 22px;
-  border-radius: 10px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* ---------------- LISTS ---------------- */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-/* Accomplishments image grid */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-  margin-top: 15px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: 120px;        /* smaller = see all at once */
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #1e293b;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.image-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
-}
-
-
-/* ---------------- BUTTON ---------------- */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 18px;
-  background: var(--accent);
-  color: #020617;
-  text-decoration: none;
-  border-radius: 8px;
+  font-size: 3rem;
   font-weight: 700;
 }
 
-.btn:hover {
-  background: #7dd3fc;
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px 0;
 }
 
-/* ---------------- FOOTER ---------------- */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: var(--bg-card);
+.hero .btns a {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 28px;
+  background: white;
+  color: var(--primary);
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero .btns a.secondary {
+  background: var(--accent);
+  color: black;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 10%;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--secondary);
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #11172b;
+  padding: 25px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* EXPERIENCE */
+.role {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ACCOMPLISHMENTS IMAGES */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  background: #1c2445;
+  padding: 10px 18px;
+  border-radius: 20px;
+  margin: 8px;
   font-size: 0.9rem;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 768px) {
-  section {
-    padding: 50px 6%;
-  }
+/* CONTACT */
+.contact a {
+  display: block;
+  color: var(--secondary);
+  margin: 10px 0;
+  text-decoration: none;
+}
 
-  .card img {
-    width: 100%;
-    height: auto;
-  }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #070b16;
+  color: #aaa;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#accomplishments">Accomplishments</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#resume">Resume</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <strong>Yusuf | Cybersecurity</strong>
+  <div>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#accomplishments">Accomplishments</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<!-- HOME -->
-<section id="home" class="hero">
-  <img 
-    src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Yusuf%20Proffesional%20Picture.jpeg?raw=true"
-    alt="Mahammad Yusuf Shaik"
-    class="profile-pic-large"
-  >
-  <h1>Mahammad Yusuf Shaik</h1>
-  <p class="hero-subtitle">
-    System Administrator · SOC Analyst · Cybersecurity Professional
-  </p>
-</section>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <!-- Replace with your profile image -->
+    <img src="https://via.placeholder.com/400" alt="Mahammad Yusuf Shaik">
 
+    <h1>Mahammad Yusuf Shaik</h1>
+    <p>System Administrator | SOC Analyst | Cybersecurity Professional</p>
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
-
-  <div class="card">
-    <h3>Programming & Scripting</h3>
-    <ul>
-      <li>Python (Automation, Security Scripts)</li>
-      <li>Bash (Linux & Incident Response)</li>
-      <li>PowerShell (Windows Security)</li>
-      <li>SQL (Database Security & Analysis)</li>
-      <li>JavaScript (Web Security)</li>
-      <li>C / C++ (Low-level & Exploit Analysis)</li>
-    </ul>
+    <div class="btns">
+      <a href="#projects">View Projects</a>
+      <a class="secondary" href="Mahammad%20Yusuf%20Shaik%20Resume%20MDX.pdf">Download Resume</a>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>Security Frameworks & Tools</h3>
-    <ul>
-      <li>Firewalls (Palo Alto, FortiGate), VPNs, IDS/IPS</li>
-      <li>SIEM (Splunk, ELK), SOAR, Threat Intelligence</li>
-      <li>Cloud Security (AWS, Azure), IAM, Zero Trust</li>
-      <li>Vulnerability Assessment & Penetration Testing</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>IT Operations</h3>
-    <ul>
-      <li>ITIL, Incident, Change & Problem Management</li>
-      <li>Linux, Windows Server, Active Directory</li>
-      <li>IAM, RBAC, Privileged Access</li>
-      <li>Nagios, Zabbix, CloudWatch</li>
-      <li>ServiceNow, Jira</li>
-    </ul>
-  </div>
-</section>
+</div>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <h2>Work Experience</h2>
-
+<h2>Work Experience</h2>
+<div class="grid">
   <div class="card">
-    <h3>System Administrator – AEON Technologies</h3>
-    <p>Jun 2024 – Present | Remote, India</p>
-    <ul>
-      <li>Conducted IT risk and security assessments across cloud and enterprise environments.</li>
-      <li>Delivered governance-aligned security recommendations.</li>
-    </ul>
+    <div class="role">System Administrator – AEON Technologies</div>
+    <p>Jun 2024 – Present | Remote</p>
+    <p>IT risk & security assessments, cloud governance, actionable security recommendations.</p>
   </div>
 
   <div class="card">
-    <h3>SOC Analyst Intern – IT Butler EZ Services</h3>
-    <p>Jan 2025 – Mar 2025 | Dubai, UAE</p>
-    <ul>
-      <li>Monitored SIEM alerts and performed incident triage.</li>
-      <li>Supported data protection and compliance initiatives.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ACCOMPLISHMENTS -->
-<section id="accomplishments">
-  <h2>Accomplishments</h2>
-
-  <div class="card">
-    <h3>Junior Cybersecurity Analyst – GISEC 2025</h3>
-    <div class="image-grid">
-      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/EMT%20TEAM%20GISEC.jpg?raw=true" alt="GISEC Team">
-      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true" alt="GISEC Yusuf">
-    </div>
+    <div class="role">SOC Analyst Intern – IT Butler EZ Services</div>
+    <p>Jan 2025 – Mar 2025 | Dubai</p>
+    <p>SIEM monitoring, incident triage, IR workflows, compliance-aligned security operations.</p>
   </div>
 
   <div class="card">
-    <h3>Cybersecurity & Digital Forensics – Dubai Police</h3>
-    <div class="image-grid">
-      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true" alt="Dubai Police Program">
-    </div>
+    <div class="role">Program Analyst Trainee – Cognizant</div>
+    <p>Jan 2023 – Aug 2023</p>
+    <p>ServiceNow ITSM, audits, IT governance & operational risk management.</p>
   </div>
-
-  <div class="card">
-    <h3>Digital Security Forum – Ajman Police</h3>
-    <div class="image-grid">
-      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20Youth%20Interaction.jpeg?raw=true" alt="Ajman Police Youth">
-      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20class.jpeg?raw=true" alt="Ajman Police Class">
-      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20certificate.jpeg?raw=true" alt="Ajman Police Certificate">
-    </div>
-  </div>
+</div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
-
+<h2>Projects</h2>
+<div class="grid">
   <div class="card">
     <h3>Network Scanner with Nmap (Python)</h3>
-    <p>Achieved up to 60% faster network reconnaissance using Python + Nmap.</p>
-    <a class="btn" href="https://github.com/Mahammadyusuf30/Network-scanner-with-NMAP-Integration-with-Python">View Project</a>
+    <p>60% faster reconnaissance using Python orchestration & Nmap.</p>
+    <a href="https://github.com/Mahammadyusuf30/Network-scanner-with-NMAP-Integration-with-Python">GitHub →</a>
   </div>
+
+  <div class="card">
+    <h3>Full-Cycle Penetration Test</h3>
+    <p>Vulnerability discovery, exploitation, risk scoring & executive reporting.</p>
+  </div>
+
+  <div class="card">
+    <h3>Football League Data Analysis</h3>
+    <p>Advanced Power BI dashboards with KPIs & performance insights.</p>
+  </div>
+</div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <h2>Certifications</h2>
-  <ul>
-    <li>Certified System Administrator – ServiceNow</li>
-    <li>Certified Implementation Specialist – ITSM</li>
-    <li>CEH – EC Council</li>
-    <li>Google Cybersecurity – Coursera</li>
-    <li>OPSWAT ICIP</li>
-  </ul>
+<!-- ACCOMPLISHMENTS -->
+<section id="accomplishments">
+<h2>Accomplishments</h2>
+
+<div class="gallery">
+  <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/EMT%20TEAM%20GISEC.jpg?raw=true">
+  <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true">
+  <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Dubai%20Police%20Middlesx%20university%20event.jpeg?raw=true">
+  <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20certificate.jpeg?raw=true">
+</div>
 </section>
 
-<!-- RESUME -->
-<section id="resume">
-  <h2>Resume</h2>
-  <a class="btn" href="Mahammad%20Yusuf%20Shaik%20Resume%20MDX.pdf">Download Resume</a>
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+  <span>Python</span><span>Bash</span><span>PowerShell</span>
+  <span>SIEM (Splunk, ELK)</span><span>Palo Alto</span><span>AWS Security</span>
+  <span>IAM & Zero Trust</span><span>Penetration Testing</span>
+  <span>ServiceNow ITSM</span><span>Linux & Windows Server</span>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:shaikmahammadyusuf65@gmail.com">shaikmahammadyusuf65@gmail.com</a></p>
-  <p>
-    <a href="https://www.linkedin.com/in/mahammadyusuf/">LinkedIn</a> |
-    <a href="https://github.com/Mahammadyusuf30">GitHub</a>
-  </p>
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<a href="mailto:shaikmahammadyusuf65@gmail.com">📧 shaikmahammadyusuf65@gmail.com</a>
+<a href="https://www.linkedin.com/in/mahammadyusuf/">🔗 LinkedIn</a>
+<a href="https://mahammadyusuf30.github.io/">💻 GitHub</a>
 </section>
 
 <footer>
-  © 2026 Mahammad Yusuf Shaik
+© 2026 Mahammad Yusuf Shaik | Cybersecurity Portfolio
 </footer>
 
 </body>
