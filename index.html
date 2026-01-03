@@ -15,6 +15,49 @@
   --text:#e5e7eb;
 }
 
+.certifications{
+  max-width:1100px;
+  margin:80px auto;
+}
+
+.certifications h2{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:40px;
+  color:var(--primary);
+}
+
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.cert-card{
+  background:linear-gradient(145deg,#0f172a,#020617);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.3s ease;
+  border:1px solid rgba(56,189,248,.15);
+}
+
+.cert-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--accent);
+}
+
+.cert-title{
+  font-weight:700;
+  color:var(--highlight);
+  margin-bottom:8px;
+}
+
+.cert-provider{
+  font-size:.95rem;
+  color:#cbd5f5;
+}
+
 .accomplishment-block{
   max-width:1100px;
   margin:0 auto 60px;
@@ -238,6 +281,41 @@ footer a:hover{
 </div>
 </section>
 
+  <!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Programming & Scripting</h3>
+<ul class="skill-list">
+<li>Python, Bash, PowerShell</li>
+<li>SQL, JavaScript</li>
+<li>C / C++</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Security Tools & Platforms</h3>
+<ul class="skill-list">
+<li>SIEM (Splunk, ELK), SOAR</li>
+<li>Firewalls, IDS/IPS, VPNs</li>
+<li>Cloud Security (AWS, Azure), IAM, Zero Trust</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>IT Operations</h3>
+<ul class="skill-list">
+<li>Linux, Windows Server, Active Directory</li>
+<li>ServiceNow, Jira</li>
+<li>Monitoring, Backup & Patch Management</li>
+</ul>
+</div>
+
+</div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
@@ -289,6 +367,39 @@ footer a:hover{
 
 </div>
 
+<!-- Certifications -->
+<section id="certifications" class="certifications">
+  <h2>Certifications</h2>
+
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <div class="cert-title">Certified System Administrator</div>
+      <div class="cert-provider">ServiceNow</div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-title">Certified Implementation Specialist – ITSM</div>
+      <div class="cert-provider">ServiceNow</div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-title">Certified Ethical Hacker (CEH)</div>
+      <div class="cert-provider">EC-Council</div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-title">Google Cybersecurity Professional Certificate</div>
+      <div class="cert-provider">Coursera</div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-title">Introduction to Critical Infrastructure Protection (ICIP)</div>
+      <div class="cert-provider">OPSWAT Academy</div>
+    </div>
+
+  </div>
+</section>
 
 </section>
 
