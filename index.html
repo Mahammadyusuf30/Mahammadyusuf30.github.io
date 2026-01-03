@@ -118,15 +118,28 @@ li {
   margin-bottom: 6px;
 }
 
-/* ---------------- IMAGES ---------------- */
-.card img {
-  width: 220px;
-  height: 150px;
+/* Accomplishments image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 120px;        /* smaller = see all at once */
   object-fit: cover;
   border-radius: 8px;
-  margin: 8px;
-  border: 1px solid var(--border-soft);
+  border: 1px solid #1e293b;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
 
 /* ---------------- BUTTON ---------------- */
 .btn {
@@ -260,15 +273,26 @@ footer {
 
   <div class="card">
     <h3>Junior Cybersecurity Analyst – GISEC 2025</h3>
-    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/EMT%20TEAM%20GISEC.jpg?raw=true">
-    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true">
+    <div class="image-grid">
+      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/EMT%20TEAM%20GISEC.jpg?raw=true" alt="GISEC Team">
+      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true" alt="GISEC Yusuf">
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Cybersecurity & Digital Forensics – Dubai Police</h3>
+    <div class="image-grid">
+      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/GISEC%20YUSUF.jpg?raw=true" alt="Dubai Police Program">
+    </div>
   </div>
 
   <div class="card">
     <h3>Digital Security Forum – Ajman Police</h3>
-    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20Youth%20Interaction.jpeg?raw=true">
-    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20class.jpeg?raw=true">
-    <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20certificate.jpeg?raw=true">
+    <div class="image-grid">
+      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20Youth%20Interaction.jpeg?raw=true" alt="Ajman Police Youth">
+      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20class.jpeg?raw=true" alt="Ajman Police Class">
+      <img src="https://github.com/Mahammadyusuf30/Mahammadyusuf30.github.io/blob/main/Ajman%20Police%20certificate.jpeg?raw=true" alt="Ajman Police Certificate">
+    </div>
   </div>
 </section>
 
