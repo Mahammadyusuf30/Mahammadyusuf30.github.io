@@ -246,6 +246,62 @@ footer a:hover{
   color:var(--accent);
   text-decoration:underline;
 }
+  /* ================= MOBILE RESPONSIVENESS FIX ================= */
+@media (max-width: 768px) {
+
+  /* Prevent button overlap */
+  .btn{
+    display:inline-block;
+    margin-top:15px;
+    width:auto;
+    text-align:center;
+  }
+
+  /* Stack nav buttons cleanly */
+  nav ul{
+    gap:10px;
+  }
+
+  nav ul li a{
+    padding:10px 18px;
+    font-size:.9rem;
+  }
+
+  /* Reduce section padding for mobile */
+  section{
+    padding:60px 6%;
+  }
+
+  /* Ensure grid cards stack properly */
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  /* Fix image grid overflow */
+  .image-grid{
+    grid-template-columns:1fr;
+  }
+
+  .image-grid img{
+    height:auto;
+  }
+
+  /* Header text scaling */
+  header h1{
+    font-size:2.2rem;
+  }
+
+  header p{
+    font-size:1rem;
+  }
+
+  /* Profile image scaling */
+  .profile-pic{
+    width:160px;
+    height:160px;
+  }
+}
+
 </style>
 </head>
 
